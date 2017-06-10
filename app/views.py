@@ -9,10 +9,10 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 import sys
-from lib import meli
+
 
 sys.path.append('../lib')
-#from meli import Meli
+from lib import meli
 
 LISTAPROD = []
 
