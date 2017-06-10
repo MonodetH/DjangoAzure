@@ -37,10 +37,6 @@ def home(request):
     except Exception as e:
         print("[Errno {0}] {1}".format(e.errno, e.strerror))
 
-
-
-
-
     return render(
         request,
         'app/index.html',
