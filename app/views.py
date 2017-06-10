@@ -2,16 +2,12 @@
 Definition of views.
 """
 
-<<<<<<< HEAD
-import json
-=======
 import httplib
 import urllib
 import base64
 import json
 #import requests
 import urllib2
->>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
@@ -105,10 +101,14 @@ def home(request):
             'title':'Home Page',
             'year':datetime.now().year,
 <<<<<<< HEAD
+<<<<<<< HEAD
             'listaProductos':LISTAPROD,
 =======
             'sentiment':data,
 >>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
+=======
+            #'sentiment':data,
+>>>>>>> 19af6b7948a815cf86c3e4e0d5a944d8963da713
         })
     )
 
