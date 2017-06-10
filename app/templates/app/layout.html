@@ -7,6 +7,7 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" href="https://http2.mlstatic.com/static/org-img/ch/ui/0.13.4/chico-mesh.min.css" type="text/css">
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
@@ -18,6 +19,59 @@
             </div>
         </div>
     </div>
+
+    <header role="banner" class="nav-header nav-header-sticky">
+		<div class="nav-bounds  ">
+					<a class="nav-logo" href="/">
+						Mercado Libre Chile - Donde comprar y vender de todo
+					</a>
+				<input type="checkbox" id="nav-header-menu-switch"/>
+				<div class="nav-header-menu-wrapper">
+					<label for="nav-header-menu-switch" aria-controls="nav-header-menu">
+						<span class="hamburger-top-bread"></span>
+						<span class="hamburger-patty"></span>
+						<span class="hamburger-bottom-bread"></span>
+					</label>
+					<nav id="nav-header-menu">	
+								<div class="nav-header-user">
+									<label for="nav-header-user-switch">
+										King-Kong <i class="nav-icon-user"></i>
+									</label>
+									<input type="checkbox" id="nav-header-user-switch"/>
+									<nav class="nav-header-user-layer">
+										<a tabindex="2" class="option-my-account" href="/" rel="nofollow">
+												Mi cuenta
+										</a>
+												<a tabindex="3" class="nav-header-user-layer-logout" href="/"
+													rel="nofollow">Salir</a>	
+									</nav>
+								</div>
+								<a tabindex="4" href="/" id="notiLink" class="option-notifications notifications-widget" rel="nofollow">
+									<i class="nav-icon-notifications"><span>Notificaciones</span></i>
+								</a>
+									<a tabindex="5" href="/" class="option-bookmarks bookmarks-widget" rel="nofollow">
+										<i class="nav-icon-bookmarks"><span>Favoritos</span></i>
+									</a>
+									<a tabindex="8" class="option-help" href="/"><i
+										class="nav-icon-help"><span>Ayuda</span></i>
+									</a>
+									<a tabindex="6" href="/" rel="nofollow"
+									   class="option-sell nav-header-btn-pub">Vender</a>
+					</nav>
+				</div>
+				<form class="nav-search" action="//www.mercadolibre.cl/jm/search" method="GET"
+				      role="search">
+					<input value="xiaomi" tabindex="1" type="text"
+					       class="nav-search-input" name="as_word" max-length="120" autocapitalize="off"
+					       autocorrect="off" spellcheck="false" 
+						   placeholder="" />
+					<button type="submit" class="nav-search-btn">
+						<i class="nav-icon-search"><span>Buscar</span></i>
+					</button>
+				</form>	
+		</div>
+	</header>
+
 
     <div class="container body-content">
 {% block content %}{% endblock %}

@@ -1,25 +1,23 @@
 """
 Definition of views.
 """
-
-import httplib
+import sys
 import urllib
+import urllib2
 import base64
 import json
-#import requests
-import urllib2
+from datetime import datetime
+import httplib
+import requests
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
-from datetime import datetime
-import sys
 from lib import meli
 
 sys.path.append('../lib')
 #from meli import Meli
 
 LISTAPROD = []
-
 
 #Metodo para obtener el ID de un item mediante su url
 def getItemId(url):
@@ -102,23 +100,6 @@ def home(request):
         })
     )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
@@ -146,6 +127,3 @@ def about(request):
             'year':datetime.now().year,
         })
     )
-
-
-
