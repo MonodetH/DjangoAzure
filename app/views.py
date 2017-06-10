@@ -8,6 +8,55 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+import sys
+from lib import meli
+
+sys.path.append('../lib')
+#from meli import Meli
+
+LISTAPROD = []
+
+
+#Metodo para obtener el ID de un item mediante su url
+def getItemId(url):
+
+	palabra = url.split("-")
+	idProducto = palabra[0][-3:] + palabra[1]
+
+	return idProducto
+
+
+#Getters necesarios para la utilizacion de la API de Mercado Libre
+def getAccesToken():
+	return "APP_USR-3443485718526955-061012-5040dcc4526436d12d4332900dcbca32__I_F__-4452942"
+
+def getAppId():
+	return "3443485718526955"
+
+def getSecretKey():
+	return "nozaVGHtkmuR6sYdOmlTq8WYkMPvqw08"
+
+def getRefreshToken():
+	return ""
+
+#Metodo para poder obtener las caracteristicas del producto y pasarselas a un objeto
+def getItem(itemid):
+    consulta = meli.Meli(client_id=getAppId(), client_secret=getSecretKey(), access_token=getAccesToken(),refresh_token = "")
+
+    respuesta = consulta.get("/item/" + itemid)
+
+    producto = json.loads(respuesta.content)
+
+    return producto
+
+#Metodo para agregar productos a una lista de productos
+def addProductsList(urlProducto):
+
+    producto = getItem(getItemId(urlProducto))
+
+    global LISTAPROD
+
+    LISTAPROD.append(producto)
 
 
 def home(request):
@@ -36,26 +85,10 @@ def home(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
-            'sentiment':data,
+            'listaProductos':LISTAPROD,
+            #'sentiment':data,
         })
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def contact(request):
     """Renders the contact page."""
@@ -84,3 +117,6 @@ def about(request):
             'year':datetime.now().year,
         })
     )
+
+
+
