@@ -2,7 +2,16 @@
 Definition of views.
 """
 
+<<<<<<< HEAD
 import json
+=======
+import httplib
+import urllib
+import base64
+import json
+#import requests
+import urllib2
+>>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
@@ -59,10 +68,35 @@ def addProductsList(urlProducto):
 
 
 
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
 
+<<<<<<< HEAD
+=======
+    # headers = {
+    #     # Request headers
+    #     'Content-Type': 'application/json',
+    #     'Ocp-Apim-Subscription-Key': '99fd5eb582914f7a8595822812988b94',
+    # }
+    #
+    # params = urllib.urlencode({
+    # })
+    #
+    # body = {"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]}
+    #
+    #
+    # conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
+    # conn.request("POST", "/text/analytics/v2.0/keyPhrases" % params, json.dumps(body), headers)
+    # response = conn.getresponse()
+    # data = response.read()
+    # print(data)
+    # conn.close()
+
+    #r = requests.post("https://westus.api.cognitive.microsoft.com", data={"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]'})
+
+>>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
     return render(
         request,
         'app/index.html',
@@ -70,9 +104,30 @@ def home(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
+<<<<<<< HEAD
             'listaProductos':LISTAPROD,
+=======
+            'sentiment':data,
+>>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
         })
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def contact(request):
     """Renders the contact page."""

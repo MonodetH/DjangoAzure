@@ -1,1 +1,7 @@
 django<2
+httplib
+urllib
+base64
+urllib2
+json
+requests
