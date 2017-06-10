@@ -7,23 +7,27 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'app/content/meli.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
 <body style="padding:0">
-
     <div class="navbar navbar-inverse navbar-fixed-top" id="barra-nav" style="background-color: #fff059">
-        <a class="navbar-brand" href="#" style="color:#0637b3"><strong>Compa Meli</strong></a>
-        <!--form class="form-inline">
-            <label for="exampleInputName2">URL:</label>
-            <input type="text" class="form-control" id="inputURL" style"width: 100%" placeholder="http://articulo.mercadolibre.cl/...">
-            <button type="submit" class="btn btn-primary">Agregar</button>
-        </form-->
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Agregar</button>
-        </form>
+        <div class="row">
+            <div class="col"
+                <a class="navbar-brand" href="#" style="color:#0637b3"><strong>Compa Meli</strong></a>
+            </div>
+            <!--form class="form-inline">
+                <label for="exampleInputName2">URL:</label>
+                <input type="text" class="form-control" id="inputURL" style"width: 100%" placeholder="http://articulo.mercadolibre.cl/...">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form-->
+            <div class="col">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-primary my-2 my-sm-0" type="submit">Agregar</button>
+                </form>
+            </div>
+        </div>
     </div>
 
     {{sentiment}}
