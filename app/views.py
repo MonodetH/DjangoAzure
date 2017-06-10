@@ -6,7 +6,7 @@ import httplib
 import urllib
 import base64
 import json
-import requests
+#import requests
 import urllib2
 from django.shortcuts import render
 from django.http import HttpRequest
