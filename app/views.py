@@ -69,8 +69,6 @@ def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
 
-<<<<<<< HEAD
-=======
     # headers = {
     #     # Request headers
     #     'Content-Type': 'application/json',
@@ -92,7 +90,6 @@ def home(request):
 
     #r = requests.post("https://westus.api.cognitive.microsoft.com", data={"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]'})
 
->>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
     return render(
         request,
         'app/index.html',
@@ -100,15 +97,8 @@ def home(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
-<<<<<<< HEAD
-<<<<<<< HEAD
             'listaProductos':LISTAPROD,
-=======
-            'sentiment':data,
->>>>>>> 0e10af8b9877c1967db51ea4f6e5a41bd3ae5cd3
-=======
             #'sentiment':data,
->>>>>>> 19af6b7948a815cf86c3e4e0d5a944d8963da713
         })
     )
 
