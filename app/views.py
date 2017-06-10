@@ -2,7 +2,7 @@
 Definition of views.
 """
 
-import httplib, urllib, base64
+import httplib, urllib, base64, json
 import urllib2
 from django.shortcuts import render
 from django.http import HttpRequest
@@ -29,7 +29,7 @@ def home(request):
 
 
     conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/text/analytics/v2.0/keyPhrases" % params, "{body}", headers)
+    conn.request("POST", "/text/analytics/v2.0/keyPhrases" % params, json.dumps(body), headers)
     response = conn.getresponse()
     data = response.read()
     print(data)
