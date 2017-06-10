@@ -41,13 +41,13 @@ def getRefreshToken():
 
 #Metodo para poder obtener las caracteristicas del producto y pasarselas a un objeto
 def getItem(itemid):
-    consulta = meli.Meli(client_id=getAppId(), client_secret=getSecretKey(), access_token=getAccesToken(),refresh_token = "")
+    #consulta = meli.Meli(client_id=getAppId(), client_secret=getSecretKey(), access_token=getAccesToken(),refresh_token = "")
 
-    respuesta = consulta.get("/item/" + itemid)
+    #respuesta = consulta.get("/item/" + itemid)
 
-    producto = json.loads(respuesta.content)
+    #producto = json.loads(respuesta.content)
 
-    return producto
+    return #producto
 
 #Metodo para agregar productos a una lista de productos
 def addProductsList(urlProducto):
