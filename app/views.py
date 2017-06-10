@@ -35,10 +35,6 @@ def home(request):
     print(data)
     conn.close()
 
-
-
-
-
     return render(
         request,
         'app/index.html',
