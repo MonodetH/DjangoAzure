@@ -40,3 +40,15 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+#barra-nav{
+    background-color: #fff059;
+}
+
+body{
+    padding: 0;
+}
+
+#nombre-empresa{
+    color:#0637b3;
+}
