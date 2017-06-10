@@ -7,6 +7,7 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" href="app/content/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
 </head>
 
@@ -14,7 +15,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" id="barra-nav" style="background-color: #fff059">
         <div class="row">
             <div class="col"
-                <a class="navbar-brand" href="#" style="color:#0637b3"><strong>Compa Meli</strong></a>
+                <a class="navbar-brand" href="#" style="color:#0637b3; font-size:30px"><strong>Compa Meli</strong></a>
             </div>
             <!--form class="form-inline">
                 <label for="exampleInputName2">URL:</label>
@@ -75,7 +76,7 @@
                     <td>$1.000</td>
                     <td>Bueno, bonito y barato</td>
                     <td>Bueno, bonito y barato</td>
-                    <td>♥ ♥ ♥ ♥ ♥</td>
+                    <td>♥ <i class="fa fa-star" aria-hidden="true"></i></td>
                     <td>
                         <button type="button" class="btn btn-primary">Ir</button>
                         <button type="button" class="close" aria-label="Close">
