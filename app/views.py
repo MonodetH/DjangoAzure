@@ -11,7 +11,7 @@ from datetime import datetime
 import sys
 
 
-sys.path.append('../lib')
+#sys.path.append('../lib')
 from lib import meli
 
 LISTAPROD = []
