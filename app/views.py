@@ -2,7 +2,7 @@
 Definition of views.
 """
 
-import httplib, urllib, base64, json
+import httplib, urllib, base64, json,requests
 import urllib2
 from django.shortcuts import render
 from django.http import HttpRequest
@@ -10,30 +10,30 @@ from django.template import RequestContext
 from datetime import datetime
 
 
-
-
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
 
-    headers = {
-        # Request headers
-        'Content-Type': 'application/json',
-        'Ocp-Apim-Subscription-Key': '99fd5eb582914f7a8595822812988b94',
-    }
+    # headers = {
+    #     # Request headers
+    #     'Content-Type': 'application/json',
+    #     'Ocp-Apim-Subscription-Key': '99fd5eb582914f7a8595822812988b94',
+    # }
+    #
+    # params = urllib.urlencode({
+    # })
+    #
+    # body = {"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]}
+    #
+    #
+    # conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
+    # conn.request("POST", "/text/analytics/v2.0/keyPhrases" % params, json.dumps(body), headers)
+    # response = conn.getresponse()
+    # data = response.read()
+    # print(data)
+    # conn.close()
 
-    params = urllib.urlencode({
-    })
-
-    body = {"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]}
-
-
-    conn = httplib.HTTPSConnection('westus.api.cognitive.microsoft.com')
-    conn.request("POST", "/text/analytics/v2.0/keyPhrases" % params, json.dumps(body), headers)
-    response = conn.getresponse()
-    data = response.read()
-    print(data)
-    conn.close()
+    #r = requests.post("https://westus.api.cognitive.microsoft.com", data={"documents":[{"id":"1", "text":"pantalla mala, 16Gb de memoria"}]'})
 
     return render(
         request,

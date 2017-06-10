@@ -4,3 +4,4 @@ urllib
 base64
 urllib2
 json
+requests
