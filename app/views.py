@@ -48,7 +48,7 @@ def home(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
-            ''
+            'sentiment':data,
         })
     )
 
