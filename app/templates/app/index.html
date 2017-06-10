@@ -3,32 +3,40 @@
 {% block content %}
 
 <div class="container">
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="exampleInputName2">URL</label>
+            <input type="text" class="form-control" id="inputURL" placeholder="http://articulo.mercadolibre.cl/...">
+        </div>
+        <button type="submit" class="btn btn-default">Agregar</button>
+    </form>
+
     <table class="table">
         <thead>
             <tr>
-            <th>#</th>
-            <th>Imagenes</th>
-            <th>Precio</th>
-            <th>Descripción</th>
-            <th>Respuestas</th>
-            <th>Calificación Vendedor</th>
-            <th>Ir</th>
+                <th>#</th>
+                <th>Imagenes</th>
+                <th>Precio</th>
+                <th>Descripción</th>
+                <th>Respuestas</th>
+                <th>Calificación Vendedor</th>
+                <th>Ir</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-            <th scope="row">1</th>
-            <td><img src="https://http2.mlstatic.com/xiaomi-celulares-smartphones-D_Q_NP_717464-MLC25594767285_052017-D.webp" alt="imagen" class="img-rounded"></td>
-            <td>$1.000</td>
-            <td>Bueno, bonito y barato</td>
-            <td>Bueno, bonito y barato</td>
-            <td>♥ ♥ ♥ ♥ ♥</td>
-            <td>
-                <button type="button" class="btn btn-primary">Ir</button>
-                <button type="button" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                </button>
-            </td>
+                <th scope="row">1</th>
+                <td><img src="https://http2.mlstatic.com/xiaomi-celulares-smartphones-D_Q_NP_717464-MLC25594767285_052017-D.webp" alt="imagen" class="img-rounded"></td>
+                <td>$1.000</td>
+                <td>Bueno, bonito y barato</td>
+                <td>Bueno, bonito y barato</td>
+                <td>♥ ♥ ♥ ♥ ♥</td>
+                <td>
+                    <button type="button" class="btn btn-primary">Ir</button>
+                    <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>
