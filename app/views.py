@@ -2,7 +2,7 @@
 Definition of views.
 """
 
-import httplib, urllib, base64, json, requests
+import httplib, urllib, base64, json
 import urllib2
 from django.shortcuts import render
 from django.http import HttpRequest
